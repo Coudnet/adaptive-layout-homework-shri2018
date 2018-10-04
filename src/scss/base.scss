@@ -1,5 +1,17 @@
-$bg-color: pink;
+@import '../../node_modules/bootstrap/scss/bootstrap-reboot';
+@import 'variables';
+@import 'header';
+@import 'main';
+@import 'footer';
 
-body {
-  background: $bg-color;
+html, body {
+  font-family: Arial, sans-serif;
+  font-size: $base-text-size;
+}
+
+main {
+  max-width: 1024px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 20px;
 }

@@ -1,0 +1,23 @@
+
+$main-text-color: #333333;
+$main-grey-text-color: #858585;
+$yellow-color: #FFD93E;
+$grey-color: #FAFAFA;
+$red-color: #DB5341;
+
+$base-text-size: 18px;
+$big-text-size: 24px;
+
+$main-title-font-size: 14px;
+$main-sub-title-font-size: 12px;
+$main-h2-font-size: 18px;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%line-height-28 {
+  line-height: 28px;
+}

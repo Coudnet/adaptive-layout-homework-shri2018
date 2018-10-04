@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "dev": "webpack --mode development",
+    "watch": "webpack --mode development --watch",
     "build": "webpack --mode production"
   },
   "author": "",
@@ -21,5 +22,8 @@
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.9"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.3"
   }
 }

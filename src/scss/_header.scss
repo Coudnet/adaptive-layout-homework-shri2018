@@ -1,0 +1,82 @@
+@import 'variables';
+
+header {
+  padding: 12px 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: white;
+  width: 100%;
+  z-index: 999;
+  font-weight: bold;
+
+  .page-logo {
+    height: 27px;
+
+    img {
+      margin-top: -5px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    position: fixed;
+    top: 0;
+    nav {
+      position: absolute;
+      transform: scaleY(0);
+      top: 15px;
+      left: 0;
+      background-color: white;
+      width: 100%;
+      padding: 20px 20px;
+      transition: transform 0.2s linear, top 0.2s linear;
+
+      a {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  .show-menu {
+    top: 50px;
+    transform: scaleY(1);
+  }
+
+  a {
+    font-size: 16px;
+    color: $main-grey-text-color;
+    text-decoration: none;
+  }
+  a.current {
+    color: $main-text-color;
+  }
+  a:hover {
+    color: $main-text-color;
+    text-decoration: none;
+  }
+
+  @media (min-width: 1200px) {
+    justify-content: flex-start;
+    padding: 32px 40px;
+    border-bottom: 1px solid #F0F0F0;
+
+    .hamburger {
+      display: none;
+    }
+
+    nav {
+      position: static;
+      transform: scaleY(1);
+      margin-left: 24px;
+      line-height: 24px;
+
+      a {
+        margin-left: 28px;
+        line-height: 20px;
+        vertical-align: sub;
+      }
+    }
+
+  }
+}
