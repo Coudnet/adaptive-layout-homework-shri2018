@@ -1,7 +1,12 @@
+/**
+ * Обработчик раскрытия меню гамбургер на мобилках
+ */
+
 hamburger.addEventListener('click', menuToggle);
 function menuToggle() {
     document.getElementsByTagName('nav')[0].classList.toggle('show-menu');
 }
+
 /**
  * Загружаем данные
  */
@@ -18,7 +23,7 @@ fetch('/src/json/events.json')
 
 /**
  * Первая функция для работы с данными -
- * выбор нужной функции рендера под конкрутный размер карточки
+ * рендер кажой карточки и добавление класса для нужного размера
  */
 function render(events) {
     let card = null;
@@ -116,6 +121,9 @@ function renderCardContent(event) {
     return c;
 }
 
+/**
+ * Рендер блока контента для термометра
+ */
 function renderThermalControl(data) {
     let tc = document.querySelector('#thermaltemplate').content.cloneNode(true);
 
@@ -125,6 +133,10 @@ function renderThermalControl(data) {
     return tc;
 }
 
+
+/**
+ * Рендер блока контента для Яндекс.Станция
+ */
 function renderPlayerControl(data) {
     let pc = document.querySelector('#playertemplate').content.cloneNode(true);
 
@@ -138,6 +150,9 @@ function renderPlayerControl(data) {
     return pc;
 }
 
+/**
+ * Рендер блока контента для кнопок
+ */
 function renderButtonsControl(data) {
     let bc = document.querySelector('#buttonstemplate').content.cloneNode(true);
 
@@ -147,12 +162,18 @@ function renderButtonsControl(data) {
     return bc;
 }
 
+/**
+ * Рендер блока контента для фото
+ */
 function renderImageControl(data) {
     let ic = document.querySelector('#imagetemplate').content.cloneNode(true);
 
     return ic;
 }
 
+/**
+ * Рендер блока контента для графика(такой же как фото, но допустим был бы график)
+ */
 function renderGraphControl(data) {
     let gc = document.querySelector('#graphtemplate').content.cloneNode(true);
 

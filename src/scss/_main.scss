@@ -1,11 +1,5 @@
 @import 'variables';
 
-#eventslist {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 20px;
-}
-
 main > h1 {
   margin: 32px 0;
 }
@@ -32,9 +26,16 @@ main > h1 {
   }
 }
 
-/*
-Карточки
- */
+#eventslist {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 20px;
+  padding: 4px;
+}
+
+/*************************************************************
+Стили для карточки
+ ************************************************************/
 
 .card-size-s {
   grid-column: span 2;
@@ -79,6 +80,7 @@ main > h1 {
 .card {
   background-color: $grey-color;
   border-radius: 20px;
+  position: relative;
 }
 
 .card.card-critical {
@@ -125,8 +127,9 @@ main > h1 {
 }
 
 .card-head-maininfo {
-  display: flex;
+  display: grid;
   align-items: center;
+  grid-template-columns: 50px 1fr;
 
   .card-head-icon {
     width: 50px;
@@ -192,8 +195,6 @@ main > h1 {
   }
 }
 
-
-
 .card-content {
   border-radius: 17px;
   background-color: $grey-color;
@@ -218,6 +219,54 @@ main > h1 {
   }
 }
 
+.card-open-icon, .card-close-icon {
+  position: absolute;
+  display: none;
+}
+
+.card-open-icon {
+  background-image: url("/dist/img/icons/next.svg");
+  width: 9px;
+  height: 16px;
+  bottom: 20px;
+  right: 30px;
+}
+
+.card-close-icon {
+  background-image: url("/dist/img/icons/cross.svg");
+  width: 14px;
+  height: 14px;
+  top: 20px;
+  right: 28px;
+}
+
+.card-critical .card-close-icon {
+  background-image: url("/dist/img/icons/cross-white.svg");
+}
+
+@media (min-width: 1024px) {
+  .card:hover {
+    box-shadow: 0 0 20px 0 rgba(197,186,186,0.50);
+    background-color: #F3F3F3;
+  }
+
+  .card-critical:hover {
+    background-color: #A33E31;
+  }
+
+  .card:hover .card-content {
+    background-color: #F3F3F3;
+  }
+
+  .card:hover .card-open-icon, .card:hover .card-close-icon {
+    display: block;
+  }
+
+  .card:hover .card-open-icon:hover, .card:hover .card-close-icon:hover {
+    cursor: pointer;
+  }
+}
+
 /*************************************************************
 Стили для контролов
  ************************************************************/
@@ -225,6 +274,12 @@ main > h1 {
 /*
 Стили для температуры
  */
+
+@media (min-width: 1024px) {
+  .card-content-control {
+    padding-right: 30px;
+  }
+}
 
 .card-content-control-thermal {
   display: flex;
