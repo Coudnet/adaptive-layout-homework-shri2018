@@ -275,12 +275,6 @@ main > h1 {
 Стили для температуры
  */
 
-@media (min-width: 1024px) {
-  .card-content-control {
-    padding-right: 30px;
-  }
-}
-
 .card-content-control-thermal {
   display: flex;
   justify-content: space-between;

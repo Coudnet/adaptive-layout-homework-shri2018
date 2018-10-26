@@ -29,7 +29,7 @@ module.exports = {
                             minimize: true//,
                             //url: false
                         }
-                    },
+                        },
                         {
                             loader: "resolve-url-loader"
                         },
@@ -50,7 +50,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: [ '.tsx', '.ts', '.js' ]
+        extensions: [ '.tsx', '.ts', '.js', '.css', '.scss' ]
     },
     plugins: [
         new ExtractTextPlugin({

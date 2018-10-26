@@ -1,2 +1,2 @@
-import './js/main.js';
+import './ts/main.ts';
 import './scss/base.scss'
