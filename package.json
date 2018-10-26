@@ -6,8 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server",
     "dev": "webpack --mode development",
-    "watch": "webpack --mode development --watch",
-    "build": "webpack --mode production"
+    "watch": "webpack --mode development --watch && postcss dist/style.css -o dist/style.min.css --watch",
+    "build": "webpack --mode production && postcss dist/style.css -o dist/style.min.css"
   },
   "author": "",
   "license": "ISC",
