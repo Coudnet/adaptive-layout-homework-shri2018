@@ -8,29 +8,31 @@
     <link rel='stylesheet' href='dist/style.css'>
 </head>
 <body>
-<div id="app">
+
     <header>
         <div class="page-logo">
-            <img src="/dist/img/icons/logo.svg" alt="Логотип Яндекс Дом">
+            <img src="dist/img/icons/logo.svg" alt="Логотип Яндекс Дом">
         </div>
         <div class="hamburger" id="hamburger">
-            <img src="/dist/img/icons/icon_list.svg" alt="Открыть меню">
+            <img src="dist/img/icons/icon_list.svg" alt="Открыть меню">
         </div>
         <nav>
-            <a href="#" class="current">События</a>
+            <a href="#" class="current main-page">События</a>
             <a href="#">Сводка</a>
             <a href="#">Устройства</a>
             <a href="#">Сценарии</a>
+            <a href="#" class="video-page">Видеонаблюдение</a>
         </nav>
     </header>
+    <div id="app">
+        <main>
 
-    <main>
-        <h1>Лента событий</h1>
-        <div id="eventslist">
+            <h1></h1>
+            <div class="content">
 
-        </div>
-    </main>
-
+            </div>
+        </main>
+    </div>
     <footer>
         <div class="footer-menu">
             <a href="#">Помощь</a>
@@ -42,7 +44,7 @@
             &copy;&nbsp;2001&ndash;2017 ООО&nbsp;&laquo;Яндекс&raquo;
         </div>
     </footer>
-</div>
+
 
 <template id="cardtemplate">
     <div class="card">
@@ -134,6 +136,79 @@
 <template id="graphtemplate">
     <div class="card-content-control-graph">
         <img src="/dist/img/Richdata.svg">
+    </div>
+</template>
+
+<template id="videostemplate">
+    <div class="video-container">
+        <div class="video-container-item">
+            <video id="v1" autoplay muted></video>
+            <div class="video-controls">
+                <div class="volume-bar"><canvas width="25" height="100"></canvas></div>
+                <div class="filters">
+                    <div class="brightness-filter filter-toggle">
+                        <span class="filter-name">Brightness </span><input class="form-input" type="range" name="track" max="100" value="50" />
+                    </div>
+                    <div class="contrast-filter filter-toggle">
+                        <span class="filter-name">Contrast </span><input class="form-input" type="range" name="track" max="100" value="50" />
+                    </div>
+                </div>
+                <div class="close-btn">
+                    <button>Все камеры</button>
+                </div>
+            </div>
+        </div>
+        <div class="video-container-item">
+            <video id="v2" autoplay></video>
+            <div class="video-controls">
+                <div class="volume-bar"><canvas width="25" height="100"></canvas></div>
+                <div class="filters">
+                    <div class="brightness-filter filter-toggle">
+                        <span class="filter-name">Brightness </span><input class="form-input" type="range" name="track" max="100" value="50" />
+                    </div>
+                    <div class="contrast-filter filter-toggle">
+                        <span class="filter-name">Contrast </span><input class="form-input" type="range" name="track" max="100" value="50" />
+                    </div>
+                </div>
+                <div class="close-btn">
+                    <button>Все камеры</button>
+                </div>
+            </div>
+        </div>
+        <div class="video-container-item">
+            <video id="v3" autoplay muted></video>
+            <div class="video-controls">
+                <div class="volume-bar"><canvas width="25" height="100"></canvas></div>
+                <div class="filters">
+                    <div class="brightness-filter filter-toggle">
+                        <span class="filter-name">Brightness </span><input class="form-input" type="range" name="track" max="100" value="50" />
+                    </div>
+                    <div class="contrast-filter filter-toggle">
+                        <span class="filter-name">Contrast </span><input class="form-input" type="range" name="track" max="100" value="50" />
+                    </div>
+                </div>
+                <div class="close-btn">
+                    <button>Все камеры</button>
+                </div>
+            </div>
+        </div>
+        <div class="video-container-item">
+            <video id="v4" autoplay muted></video>
+            <div class="video-controls">
+                <div class="volume-bar"><canvas width="25" height="100"></canvas></div>
+                <div class="filters">
+                    <div class="brightness-filter filter-toggle">
+                        <span class="filter-name">Brightness </span><input class="form-input" type="range" name="track" max="100" value="50" />
+                    </div>
+                    <div class="contrast-filter filter-toggle">
+                        <span class="filter-name">Contrast </span><input class="form-input" type="range" name="track" max="100" value="50" />
+                    </div>
+                </div>
+                <div class="close-btn">
+                    <button>Все камеры</button>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 

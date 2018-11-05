@@ -1,16 +1,25 @@
-Проект собран с помощью webpack + запуск на webpack server
+# ДЗ Архитектура
+## Launch this
+###Для работы тестовых потоков видео
+ ```shell
+ git clone https://github.com/mad-gooze/shri-2018-2-multimedia-homework.git
+ cd shri-2018-2-multimedia-homework
+ npm i
+ npm start
+ ```
+ 
+ ### Для запуска проекта
+ 
+ Flux версия проекта находится в ветке fluxmigration
+ 
+ ```shell
+  git clone https://github.com/Coudnet/adaptive-layout-homework-shri2018
+  cd adaptive-layout-homework-shri2018
+  git checkout fluxmigration
+  npm i
+  npm start
+```
 
-Из библиотек использоуется только **bootstrap_reboot**
-
-Шаблонизатор:
-
-Контролы для устройств выбираются только в зависимости от 
-source.
-Их размер и т.д. никак не влияют на выбор контрола. 
-Предположил такое поведение, возможно не верно))
-
-Громкость плеера рендерится как абсолютное позиционирование ползунка
-добавлением значения volume в css left
-
-Для того, чтобы при ховере на десктопе нижняя стрелочка не налезала на контент,
-у всех элекментов с контолами есть padding 30px. Предполагаю, что так делать не стоит)
+ После запуска webpack-server проект будет доступен по адресу **http://localhost:8081**
+ 
+ 
