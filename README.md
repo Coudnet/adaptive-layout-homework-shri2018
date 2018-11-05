@@ -1,17 +1,5 @@
 # ДЗ Архитектура
 ## Launch this
-###Для работы тестовых потоков видео
- ```shell
- git clone https://github.com/mad-gooze/shri-2018-2-multimedia-homework.git
- cd shri-2018-2-multimedia-homework
- npm i
- npm start
- ```
- 
- ### Для запуска проекта
- 
- Flux версия проекта находится в ветке fluxmigration
- 
  ```shell
   git clone https://github.com/Coudnet/adaptive-layout-homework-shri2018
   cd adaptive-layout-homework-shri2018
@@ -19,7 +7,31 @@
   npm i
   npm start
 ```
+После запуска webpack-server проект будет доступен по адресу **http://localhost:8081**
 
- После запуска webpack-server проект будет доступен по адресу **http://localhost:8081**
+Для работы приложения необходимы два сервера:
+## Запуск сервера тестовых потоков
+ ```shell
+  cd servers/video-streams-server
+  npm i
+  npm start
+```
+
+## Запуск Node JS сервера
+ ```shell
+  cd servers/data-server
+  npm i
+  npm start
+```
  
- 
+## Flux фреймворк
+Фреймворк называется Flucha  и подключается как npm пакет
+
+https://www.npmjs.com/package/flucha
+
+https://github.com/Coudnet/flucha
+
+## Сохранение данных на сервере
+
+Node JS сервер отвечает за загрузку JSON событий и за сохранение текущей вкладки.
+Вкладка хранится просто как глобальная переменная на сервере
